@@ -317,7 +317,7 @@
     <section class="hero">
         <div class="hero-content">
             <h1>🏆 LockerRoom Bot</h1>
-            <p>The ultimate Discord bot for managing sports teams and gaming communities</p>
+            <p>The ultimate Discord bot for managing TCs and Team Hubs.</p>
             <div class="btn-group">
                 <a href="#" id="invite-btn" class="btn btn-primary">
                     <span>➕</span> Add to Discord
@@ -370,7 +370,7 @@
                 <div class="feature-card">
                     <div class="feature-icon">⏰</div>
                     <div class="feature-title">Game Scheduling</div>
-                    <div class="feature-description">Create game time polls with multiple time options. Players can select their availability with interactive buttons.</div>
+                    <div class="feature-description">Create time polls with multiple time options. Create gametime poll that players can select their availability with interactive buttons.</div>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">📋</div>
@@ -389,8 +389,8 @@
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">👑</div>
-                    <div class="feature-title">League Support</div>
-                    <div class="feature-description">Manage multiple leagues within the same server with custom roles and permissions.</div>
+                    <div class="feature-title">Premium Support</div>
+                    <div class="feature-description">Create a support ticket and expect a reply in less than 30 minutes.</div>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🛡️</div>
@@ -434,7 +434,7 @@
             if (statsData.status === 'online' && statsData.bot !== 'Starting') {
                 statusEl.innerHTML = '<span style="color: #57F287;">🟢 Online</span>';
             } else {
-                statusEl.innerHTML = '<span style="color: #ED4245;">🔴 Starting...</span>';
+                statusEl.innerHTML = '<span style="color: #ED4245;">🔴 Starting... MAKE A TICKET IF YOU SEE THIS</span>';
             }
 
             // Fetch server list after stats
@@ -444,11 +444,11 @@
             console.error('Error fetching bot stats:', error);
             document.getElementById('guild-count').innerHTML = '<span style="color: #ED4245;">Error</span>';
             document.getElementById('user-count').innerHTML = '<span style="color: #ED4245;">Error</span>';
-            document.getElementById('uptime').innerHTML = '<span style="color: #ED4245;">🔴 Offline</span>';
+            document.getElementById('uptime').innerHTML = '<span style="color: #ED4245;">🔴 Offline MAKE A TICKET IF YOU SEE THIS</span>';
 
             document.getElementById('servers-container').innerHTML = `
                 <div class="error-message">
-                    ❌ Unable to fetch server data. The bot may be offline or experiencing issues.
+                    ❌ Unable to fetch server data. The bot may be offline or experiencing issues MAKE A TICKET IF YOU SEE THIS.
                 </div>
             `;
         }
@@ -473,7 +473,7 @@
 
             const serversHTML = guilds.map(guild => `
                 <div class="server-card">
-                    <div class="server-name">🏰 ${guild.name}</div>
+                    <div class="server-name">${guild.name}</div>
                     <div class="server-info">
                         <span>👥</span>
                         <span>${guild.memberCount.toLocaleString()} members</span>
@@ -491,7 +491,7 @@
             console.error('Error fetching servers:', error);
             container.innerHTML = `
                 <div class="no-data">
-                    🏰 Currently serving <strong>${guildCount}</strong> amazing communities!
+                    Currently serving <strong>${guildCount}</strong> amazing communities!
                     <br><br>
                     <small style="color: var(--gray);">Join one of them by adding LockerRoom to your server!</small>
                 </div>
